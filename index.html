@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090b">
+<title>MELORA — Music for Every Mood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">M</span><span>MELORA</span></div>
+    <nav>
+      <button class="nav active" data-page="home">⌂ <span>Home</span></button>
+      <button class="nav" data-page="discover">✦ <span>Discover</span></button>
+      <button class="nav" data-page="library">♫ <span>Library</span></button>
+      <button class="nav" data-page="playlists">▣ <span>Playlists</span></button>
+    </nav>
+    <div class="side-title">YOUR MUSIC</div>
+    <button class="nav" data-page="liked">♡ <span>Liked Songs</span><b id="likeCount">0</b></button>
+    <button class="nav" data-page="downloads">⇩ <span>Downloads</span></button>
+    <div class="sidebar-bottom">
+      <button class="nav" id="themeBtn">◐ <span>Ambient Mode</span></button>
+      <div class="profile-mini"><div class="avatar">PD</div><div><strong>Prasenjit</strong><small>Free account</small></div></div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+      <div class="search"><span>⌕</span><input id="search" placeholder="Search songs, artists, albums..." autocomplete="off"></div>
+      <button class="icon-btn" title="Notifications">♢</button>
+      <button class="avatar">PD</button>
+    </header>
+
+    <section id="content"></section>
+  </main>
+
+  <div class="player">
+    <div class="now">
+      <div class="cover" id="playerCover">M</div>
+      <div><strong id="playerTitle">Select a song</strong><small id="playerArtist">MELORA</small></div>
+    </div>
+    <div class="controls">
+      <div class="control-row"><button id="shuffle">⤨</button><button id="prev">◀</button><button class="play" id="play">▶</button><button id="next">▶</button><button id="repeat">↻</button></div>
+      <div class="progress"><span>0:00</span><input type="range" id="progress" min="0" max="100" value="0"><span>3:42</span></div>
+    </div>
+    <div class="player-extra"><button id="lyricsBtn">Lyrics</button><button>♬</button><input type="range" value="75" title="Volume"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="lyricsModal"><div class="modal-card"><button class="close" id="closeLyrics">×</button><div class="eyebrow">NOW PLAYING</div><h2 id="lyricsTitle">Lyrics</h2><div class="lyrics" id="lyricsText"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
